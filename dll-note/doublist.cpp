@@ -1,3 +1,5 @@
+//"doublist.cpp"  
+//Double circular linked list 
 #include "doublist.h"
 
 template <class type> doublist <type> :: doublist(){   
@@ -57,12 +59,8 @@ void doublist <type> :: Next(){
 template <class type>
 void doublist <type> :: Prior(){
   /* Make pcurrent point to the node prior to current node; if the node is header node, then make pcurrent point to tailer node */
-  pcurrent = pcurrent->prior;  // pcurrent前移一个位置
+  pcurrent = pcurrent->prior;  // pcurrent move to prior
   if(pcurrent == head) pcurrent = head->prior;
   /* If the list is empty, pcurrent points to header node.*/
   /* If current node is header node, at this time, pcurrent points to tailer node. ???? */
 }
-
-
-
-
